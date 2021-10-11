@@ -7,19 +7,25 @@ bezerras = {}
 vacas = {}
 tempo = 0
 prazo = int(input("Quantos anos? ")) * 12
-tempov = (type(ciclo/prazo))
-tempob = (ciclo/prazo)
-for x in range(10):
-    bezerras[x] = 1
+tempov = tempo
+tempob = tempo
+ran = 10
 
-while tempo <= prazo:
+while tempo < prazo:
     tempo += 1
     #Inicio do projeto com vacas emprenhadas
-    if tempov == 12:
-        x = bezerras[len(bezerras)]
-        bezerras[x] = bezerras[len(bezerras)]
-        for k in vacas.items():
-            bezerras[x] = tempo
+    for x in range(ran):
+        vacas[x] = tempo
+        for i in vacas.values():
+            if vacas[x] == 12:
+                vacas[x] = 0
+
+
+    for y in range(10):
+        bezerras[y] = tempo
+
+
+
 
 
     #proxima leva de gado
@@ -34,7 +40,7 @@ while tempo <= prazo:
 
 
 
-'''print(prazo)'''
+print(tempo)
 print(vacas)
 print(bezerras)
 '''print(f'Quantiade de vacas {vacas}')
