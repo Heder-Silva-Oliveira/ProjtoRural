@@ -2,27 +2,35 @@ pronta_meses = 14
 entregetacao_meses = 2
 gestacao_meses = 10
 ciclo = int(12)
-vacasini = 10
+vacasini = 5
 bezerras = {}
 vacas = {}
-tempo = 0
+tempo = outra = 0
 prazo = int(input("Quantos anos? ")) * 12
-tempov = tempo
-tempob = tempo
-ran = 10
+numero = len(bezerras)
 
+
+cont = 1
 while tempo < prazo:
     tempo += 1
     #Inicio do projeto com vacas emprenhadas
-    for x in range(ran):
+    for x in range(vacasini):
         vacas[x] = tempo
         for i in vacas.values():
-            if vacas[x] == 12:
-                vacas[x] = 0
+            resultado = int(vacas[x] / 12)
+            if resultado == cont:
+                cont += 1
+                outra = {cont-2: 0}
+                bezerras.update(outra)
+            else:
+                pass
 
 
-    for y in range(10):
-        bezerras[y] = tempo
+
+
+
+
+
 
 
 
@@ -39,8 +47,9 @@ while tempo < prazo:
             pass'''
 
 
-
-print(tempo)
+print(resultado)
+print(outra)
+print(cont)
 print(vacas)
 print(bezerras)
 '''print(f'Quantiade de vacas {vacas}')
