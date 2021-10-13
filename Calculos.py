@@ -9,19 +9,20 @@ tempo = outra = 0
 prazo = int(input("Quantos anos? ")) * 12
 numero = len(bezerras)
 
+vcas.
 
-cont = 1
 while tempo < prazo:
     tempo += 1
     #Inicio do projeto com vacas emprenhadas
     for x in range(vacasini):
         vacas[x] = tempo
-        for i in vacas.values():
+        for i in vacas.items():
             resultado = int(vacas[x] / 12)
-            if resultado == cont:
-                cont += 1
-                outra = {cont-2: 0}
+
+            if resultado == resultado:
+                outra = {resultado: resultado}
                 bezerras.update(outra)
+
             else:
                 pass
 
@@ -47,9 +48,8 @@ while tempo < prazo:
             pass'''
 
 
-print(resultado)
+
 print(outra)
-print(cont)
 print(vacas)
 print(bezerras)
 '''print(f'Quantiade de vacas {vacas}')
