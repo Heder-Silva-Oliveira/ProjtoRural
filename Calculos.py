@@ -4,7 +4,7 @@ gestacao_meses = 10
 ciclo = int(12)
 vacasini = 1
 bezerras = {}
-vacas = {0:0}
+vacas = {0:0, 1:1}
 tempo = outra = 0
 prazo = int(input("Quantos anos? ")) * 12
 numero = len(bezerras)
@@ -17,12 +17,9 @@ while tempo < prazo:
     for x in range(vacasini):
         vacas[x] += 1
         if x == 12:
-            vacas[x] = 0
-
-
+            vacas[x] = 1
     for k, i in vacas.items():
         resultado = int(vacas[k] / 12)
-
         tempv += 1
     #Adicionando bezerras
         if resultado == cont:
@@ -35,14 +32,14 @@ while tempo < prazo:
 
 #proxima leva de gado
     for x, z in bezerras.items():
-        bezerras[x] = tempo
+        bezerras[x] += 1
+        if x == 14:
+            bezerras[x] = 0
     for k, i in bezerras.items():
         resultado = int(bezerras[k] / 14)
         acr = len(vacas)
         # Adicionando bezerras
-        if len(bezerras) > len(vacas):
-            break
-        elif resultado == cont2:
+        if resultado == cont2:
             cont2 += 1
             outra = {acr: resultado}
             vacas.update(outra)
