@@ -26,14 +26,19 @@ while tempo < prazo:
             pass
 
     #proxima leva de gado
-    '''elif bezerras_totais > 0:
-        if tempob == 14:
-            vacas += bezerras_totais
-            bezerras = bezerras_totais
-            tempob = 0
-            bezerras_totais = 0
+    for x, z in bezerras.items():
+        bezerras[x] = tempo
+    for k, i in bezerras.items():
+        resultado = int(bezerras[k] / 14)
+        acr = len(vacas)
+        # Adicionando bezerras
+        if len(bezerras) > len(vacas):
+            break
+        elif resultado == resultado:
+            outra = {acr: resultado}
+            vacas.update(outra)
         else:
-            pass'''
+            pass
 
 
 
