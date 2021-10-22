@@ -15,9 +15,12 @@ while tempo < prazo:
     tempo += 1
     #Inicio do projeto com vacas emprenhadas
     for x in range(vacasini):
-        vacas[x] += 1
-        if x == 12:
+        vacas[x] = tempv
+        tempv += 1
+        if vacas[x] == 12:
             vacas[x] = 1
+
+
     for k, i in vacas.items():
         resultado = int(vacas[k] / 12)
         tempv += 1
