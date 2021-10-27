@@ -2,14 +2,14 @@ pronta_meses = 14
 entregetacao_meses = 2
 gestacao_meses = 10
 ciclo = int(12)
-vacasini = 1
+vacasini = cont = cont2 = 1
 bezerras = {}
 vacas = {0:0, 1:1}
 tempo = outra = 0
 prazo = int(input("Quantos anos? ")) * 12
 numero = len(bezerras)
-cont2 = 1
-cont = 1
+
+
 tempv = 0
 while tempo < prazo:
     tempo += 1
